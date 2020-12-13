@@ -1,0 +1,94 @@
+.background--size{
+    height: 100vh;
+    width: 100vw;
+}
+
+.background--image{
+    background-image: url("background.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.navBar{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    height: 15%;
+    padding: 20px 20px 0 80px;
+}
+
+.navIcon{
+    height: 75px;
+    width: 75px;
+    background-color: #5B7D6C;
+}
+
+.navRight{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding-right: 60px;
+}
+
+.bodyHero{
+    display:flex;
+    flex-direction:row;
+    height: 85%;
+}
+
+.heroLeft{
+    width: 50%;
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    padding-left: 80px;
+    justify-content: center;
+}
+
+.heroRight{
+    width: 50%;
+}
+
+.body--font-white{
+    color: white;
+}
+
+.body--font{
+    font-family: 'Roboto', sans-serif;
+}
+
+.header--font-size{
+    font-size: 4em;
+    font-weight:900;
+    margin: 0;
+}
+
+.header--font-size-smaller{
+    font-size: 3em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.form--formatting{
+    display:flex;
+    flex-direction:row;
+    margin-top:50px;
+    margin-bottom:80px;
+}
+
+.input--style{
+    width:60%;
+    height: 40px;
+}
+
+
+.searchSubmitStyle:hover{
+    cursor:pointer;
+}
+
+.searchSubmitStyle{
+    width: 45px;
+    height: 45px;
+    background-color:#5B7D6C;
+}
