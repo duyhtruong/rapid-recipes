@@ -98,3 +98,9 @@
     font-size: 1.5em;
     padding-left: 5px;
 }
+
+.resultStyle{
+    background-color: white;
+    padding: 30px 30px 30px 30px;
+    width: 200px;
+}

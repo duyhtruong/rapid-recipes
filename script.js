@@ -25,8 +25,10 @@ function searchAPI(){
                 span = createNode('span');
             img.src = author.picture.medium; // Add source of image to be src of img
             span.innerHTML = `${author.name.first} ${author.name.last}`; //add author first and last name in span
+
             append(li, img);
             append(li, span);
+            li.classList.add("resultStyle");
             append(ul,li);
         })
     })
