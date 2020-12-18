@@ -109,19 +109,34 @@
 .resultsListFormat{
     display:flex;
     flex-direction:row;
+    list-style-type: none;
 }
 
 .resultStyle{
-    width: 350px;
-    height: 400px;
-    background-color: white;
+    display:Flex;
+    flex-direction:column;
+    
     font-family: 'Roboto';
     font-weight: 300;
     margin-bottom:100px;
     margin-right:25px;
-    padding: 20px 20px 20px 20px
+   
 }
 
+.resultsCardTop{
+    width: 350px;
+    height: 200px;
+    background-color: #CBC286;
+    padding: 30px;
+    text-align: center
+}
+
+.resultsCardBottom{
+    width: 350px;
+    height:200px;
+    background-color:#ffffff;
+    padding: 30px;
+}
 .resultTextGroup{
     display:flex;
     flex-direction:column;

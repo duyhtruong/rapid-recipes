@@ -27,6 +27,8 @@ function searchAPI(){
                 authorLastName = createNode('p'),
                 authorEmail = createNode('p'),
                 authorAge = createNode('p');
+                divTop = createNode('div');
+                divBottom = createNode('div');
 
             img.src = author.picture.large; // Add source of image to be src of img
             authorFirstName.innerHTML=`${author.name.first}`;
@@ -34,13 +36,19 @@ function searchAPI(){
             authorEmail.innerHTML=`${author.email}`;
             authorAge.innerHTML=`${author.dob.age}`;
 
+            append(divTop,img);
+            divTop.classList.add("resultsCardTop");
+
             span.classList.add('resultTextGroup')
             append(span,authorFirstName);
             append(span,authorLastName);
             append(span,authorEmail);
             append(span,authorAge);
-            append(li, img);
-            append(li, span);
+            
+            append(divBottom,span);
+            divBottom.classList.add("resultsCardBottom");
+            append(li,divTop);
+            append(li, divBottom);
             li.classList.add("resultStyle");
             append(ul,li);
         })
