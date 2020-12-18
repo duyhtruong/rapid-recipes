@@ -14,37 +14,36 @@
 </head>
 
 <body>
-    <div class="background--size background--image body--font">
+    <div class="background--color body--font">
         <!--Nav Bar-->
-        <div class="navBar body--font-white">
-            <div class="navIcon">
-                <img src='./icon.png' height=100% width=100% />
+        <div class="navBar ">
+            <div class="navLogo">
+                <img style="height:35px; width:35px; background-color: #5B7D6C;" src='./icon.png' height=100% width=100% />
+                <p style="padding-left: 10px;">Rapid Recipes</p>
             </div>
             <div class="navRight">
-                <h2 style="padding-right: 20px;">Home</h2>
-                <h2>Featured Recipes</h2>
+                <p style="padding-right: 50px;">About</p>
+                <p>Featured Recipes</p>
             </div>
         </div>
         <!--Nav Bar End-->
 
         <!--Main Body Start-->
         <div class="bodyHero">
-            <!--Left Hero Start-->
-        <div class="heroLeft">
-        <h1 class="header--font-size body--font-white body--font">Just Recipes</h1>
-        <h2 class="header--font-size-smaller body--font-white">No Ads or Backstories</h2>
+           
+        <div class="bodyHeader">
+        <h1 class="header--font-size  body--font">Just Recipes</h1>
+        <h2 class="header--font-size-smaller ">No Ads or Backstories</h2>
         <form class="form--formatting">
             <input class="input--style" placeholder="Search Recipes" type="text" id="searchTerm" name="searchTerm"><br>
             <button type=button onclick="searchAPI()"><img class="searchSubmitStyle" src='search.png'></button>
         </form>
         </div>
-        <!--Left Hero End-->
-
-        <!--Right Hero Start-->
-        <div class="heroRight">
+        <div class="bodyResults">
             <ul id='resultsList'></ul>
         </div>
-        <!--Right Hero End-->
+        
+
         </div>
         <!--Main Body End-->
      
