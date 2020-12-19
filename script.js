@@ -50,6 +50,7 @@ function searchAPI(){
             append(li,divTop);
             append(li, divBottom);
             li.classList.add("resultStyle");
+            li.classList.add("animate__animated", "animate__fadeInUp");
             append(ul,li);
         })
     })
