@@ -1,5 +1,8 @@
 const ul = document.getElementById('resultsList');
-const url = 'https://randomuser.me/api/?results=3';
+const url = 'https://api.spoonacular.com/recipes/random';
+const api_key = '?apiKey=42c7b9a170cc429f84ebee0ade358384'
+const url_query = '&number=3' 
+const complete_url = url + api_key + url_query;
 
 function createNode(element){
     return document.createElement(element); // Create type of element you pass in param
@@ -10,40 +13,35 @@ function append(parent, el){
 }
 
 function searchAPI(){
-    fetch(url,{
-        mode: 'cors',
-        headers:{
-            'Content-Type': 'application.json'
-        }
-    }) // Call the fetch function passing url of API
+    fetch(complete_url) // Call the fetch function passing url of API
     .then((resp)=>resp.json()) // Transform the data into json
     .then(function(data){
-        let authors = data.results; // get the results
-        return authors.map(function(author){ //map through results
+        let searchResults = data.recipes; // get the results
+        return searchResults.map(function(searchResults){ //map through results
             let li = createNode('li'), // Create elements we need
                 img = createNode('img'),
                 span = createNode('span'),
-                authorFirstName = createNode('p'),
-                authorLastName = createNode('p'),
-                authorEmail = createNode('p'),
-                authorAge = createNode('p');
+                resultsTitle = createNode('p'),
+                resultsID = createNode('p'),
+                cookTime = createNode('p'),
+                
                 divTop = createNode('div');
                 divBottom = createNode('div');
 
-            img.src = author.picture.large; // Add source of image to be src of img
-            authorFirstName.innerHTML=`${author.name.first}`;
-            authorLastName.innerHTML=`${author.name.last}`;
-            authorEmail.innerHTML=`${author.email}`;
-            authorAge.innerHTML=`${author.dob.age}`;
+            img.src = searchResults.image; // Add source of image to be src of img
+            resultsTitle.innerHTML=`${searchResults.title}`;
+            resultsID.innerHTML=`${searchResults.id}`;
+            cookTime.innerHTML=`Ready In ${searchResults.readyInMinutes} Minutes`;
+    
 
             append(divTop,img);
             divTop.classList.add("resultsCardTop");
 
             span.classList.add('resultTextGroup')
-            append(span,authorFirstName);
-            append(span,authorLastName);
-            append(span,authorEmail);
-            append(span,authorAge);
+            append(span,resultsTitle);
+            append(span,resultsID);
+            append(span,cookTime);
+            
             
             append(divBottom,span);
             divBottom.classList.add("resultsCardBottom");
