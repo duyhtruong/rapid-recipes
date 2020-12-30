@@ -24,6 +24,7 @@ function searchAPI(){
                 resultsTitle = createNode('p'),
                 resultsID = createNode('p'),
                 cookTime = createNode('p'),
+                detailButton = createNode('button'),
                 
                 divTop = createNode('div');
                 divBottom = createNode('div');
@@ -32,7 +33,7 @@ function searchAPI(){
             resultsTitle.innerHTML=`${searchResults.title}`;
             resultsID.innerHTML=`${searchResults.id}`;
             cookTime.innerHTML=`Ready In ${searchResults.readyInMinutes} Minutes`;
-    
+            detailButton.innerHTML = `${searchResults.id}`
 
             append(divTop,img);
             divTop.classList.add("resultsCardTop");
@@ -41,6 +42,7 @@ function searchAPI(){
             append(span,resultsTitle);
             append(span,resultsID);
             append(span,cookTime);
+            append(span, detailButton);
             
             
             append(divBottom,span);
