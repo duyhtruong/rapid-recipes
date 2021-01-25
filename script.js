@@ -33,10 +33,13 @@ function searchAPI(){
             resultsTitle.innerHTML=`${searchResults.title}`;
             resultsID.innerHTML=`${searchResults.id}`;
             cookTime.innerHTML=`Ready In ${searchResults.readyInMinutes} Minutes`;
-            detailButton.innerHTML = `${searchResults.id}`
-            img.classList.add("resultsImageSetWidth")
-
+            detailButton.innerHTML="FULL RECIPE";
+            img.classList.add("resultsImageSetWidth");
+            detailButton.classList.add("resultsFullRecipeButton");
+            resultsTitle.classList.add("resultsTitleFont");
+            
             append(divTop,img);
+            
             divTop.classList.add("resultsCardTop");
 
             span.classList.add('resultTextGroup')
