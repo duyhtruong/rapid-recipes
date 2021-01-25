@@ -144,8 +144,9 @@
 }
 
 .resultsTitleFont{
-    font-weight:500;
-    font-size:1.5em;
+    font-weight:900;
+    color:#333333;
+    letter-spacing:0.25px;
 }
 
 .resultsImageSetWidth{
@@ -159,4 +160,13 @@
     background-color:#863438;
     font-weight:300;
     letter-spacing:1px;
+    width: 90%;
+    align-self: center;
+}
+
+.resultsFullRecipeButton:hover{
+    color:#863438;
+    background-color:white;
+    border: 1px solid #863438; 
+    cursor: pointer;
 }
