@@ -34,6 +34,7 @@ function searchAPI(){
             resultsID.innerHTML=`${searchResults.id}`;
             cookTime.innerHTML=`Ready In ${searchResults.readyInMinutes} Minutes`;
             detailButton.innerHTML = `${searchResults.id}`
+            img.classList.add("resultsImageSetWidth")
 
             append(divTop,img);
             divTop.classList.add("resultsCardTop");

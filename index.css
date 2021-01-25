@@ -127,7 +127,6 @@
     width: 350px;
     height: 200px;
     background-color: #CBC286;
-    padding: 30px;
     text-align: center
 }
 
@@ -135,9 +134,15 @@
     width: 350px;
     height:200px;
     background-color:#ffffff;
-    padding: 30px;
+    padding: 15px;
 }
 .resultTextGroup{
     display:flex;
     flex-direction:column;
+    justify-content:space-between;
+    height:100%;
+}
+
+.resultsImageSetWidth{
+    max-width:100%;
 }
