@@ -29,9 +29,11 @@ function searchAPI(){
                 cookTime = createNode('p'),
                 detailButton = createNode('button'),
                 full_recipe_text = createNode('p');
-
-                divTop = createNode('div');
+                divTop = createNode('div'),
                 divBottom = createNode('div');
+
+            let full_recipe_url = base_url + searchResults.id + '/ingredientWidget.json';
+
 
             img.src = searchResults.image; // Add source of image to be src of img
             resultsTitle.innerHTML=`${searchResults.title}`;
@@ -63,8 +65,9 @@ function searchAPI(){
             li.classList.add("animate__animated", "animate__fadeInUp");
             append(ul,li);
 
-            let full_recipe_url = base_url + searchResults.id + '/ingredientWidget.json';
-
+            detailButton.onclick = function(){
+                getFullRecipe(full_recipe_url);
+            };
 
         })
     })
@@ -74,15 +77,16 @@ function searchAPI(){
     });
 }
 
-function fullRecipe(full_recipe_url){
-    fetch(full_recipe_url) // Call the fetch function passing url of API
-    .then((resp)=>resp.json()) // Transform the data into json
-    .then(function(data){
+function getFullRecipe(full_recipe_url){
+    //fetch(full_recipe_url) // Call the fetch function passing url of API
+    //.then((resp)=>resp.json()) // Transform the data into json
+    //.then(function(data){
 
-    })
-    .catch(function(error){
-        console.log(error);
+    //})
+    //.catch(function(error){
+      //  console.log(error);
         //Run code if server returns any errors
-    });
+    //});
+    alert(full_recipe_url);
 }
 
