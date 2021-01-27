@@ -176,3 +176,13 @@
     flex-direction:column;
     list-style-type: none;
 }
+
+.displayNone{
+    display: none;
+}
+
+.justifyRow{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

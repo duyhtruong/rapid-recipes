@@ -5,7 +5,7 @@ const api_key = '?apiKey=42c7b9a170cc429f84ebee0ade358384'
 const url_query = '&number=3' 
 const complete_url = base_url + random_search + api_key + url_query;
 const ulIngredients = document.getElementById('ingredientsList');
-
+const ingredientsContainer = document.getElementById('ingredientsContainer');
 
 function createNode(element){
     return document.createElement(element); // Create type of element you pass in param
@@ -66,7 +66,7 @@ function searchAPI(){
             append(ul,li);
 
             detailButton.onclick = function(){
-                getFullRecipe(full_recipe_url);
+                getFullRecipe(full_recipe_url,resultsTitle, img);
             };
 
         })
@@ -77,21 +77,31 @@ function searchAPI(){
     });
 }
 
-function getFullRecipe(full_recipe_url){
+function getFullRecipe(full_recipe_url,resultsTitle, img){
     fetch(full_recipe_url) // Call the fetch function passing url of API
     .then((resp)=>resp.json()) // Transform the data into json
     .then(function(data){
-        let ingredientResults = data.ingredients;
+        let ingredientResults = data.ingredients,
+            divLeft = createNode('div'),
+            divRight = createNode('div'),
+            divContainer = createNode('div');
+            ingredientTitle = createNode('p');
+            ingredientTitle.innerHTML = 'Ingredients:';
+            divContainer.classList.add('justifyRow');
+            append(divLeft, resultsTitle);
+            append(divLeft, img);
+            append(divRight, ingredientTitle);
+            append(divContainer, divLeft);
+            append(divContainer, divRight);
+            append(ingredientsContainer,divContainer);
         return ingredientResults.map(function(ingredientResults){
             //create variables
             let li = createNode('li'),
                 ingredientName = createNode('p');
-
             ingredientName.innerHTML = `${ingredientResults.amount.us.value}` + ` ${ingredientResults.amount.us.unit}` + ` ${ingredientResults.name}`;
-            
             append(li,ingredientName);
             append(ulIngredients, li);
-            
+            append(divRight, ulIngredients);
 
         })
     })
@@ -99,6 +109,6 @@ function getFullRecipe(full_recipe_url){
         console.log(error);
         //Run code if server returns any errors
     });
-    
+    ul.classList.add('displayNone');
 }
 
