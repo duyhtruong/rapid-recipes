@@ -4,7 +4,7 @@ const random_search = 'random';
 const api_key = '?apiKey=42c7b9a170cc429f84ebee0ade358384'
 const url_query = '&number=3' 
 const complete_url = base_url + random_search + api_key + url_query;
-
+const ulIngredients = document.getElementById('ingredientsList');
 
 
 function createNode(element){
@@ -32,7 +32,7 @@ function searchAPI(){
                 divTop = createNode('div'),
                 divBottom = createNode('div');
 
-            let full_recipe_url = base_url + searchResults.id + '/ingredientWidget.json';
+            let full_recipe_url = base_url + searchResults.id + '/ingredientWidget.json' + api_key;
 
 
             img.src = searchResults.image; // Add source of image to be src of img
@@ -78,15 +78,27 @@ function searchAPI(){
 }
 
 function getFullRecipe(full_recipe_url){
-    //fetch(full_recipe_url) // Call the fetch function passing url of API
-    //.then((resp)=>resp.json()) // Transform the data into json
-    //.then(function(data){
+    fetch(full_recipe_url) // Call the fetch function passing url of API
+    .then((resp)=>resp.json()) // Transform the data into json
+    .then(function(data){
+        let ingredientResults = data.ingredients;
+        return ingredientResults.map(function(ingredientResults){
+            //create variables
+            let li = createNode('li'),
+                ingredientName = createNode('p');
 
-    //})
-    //.catch(function(error){
-      //  console.log(error);
+            ingredientName.innerHTML = `${ingredientResults.amount.us.value}` + ` ${ingredientResults.amount.us.unit}` + ` ${ingredientResults.name}`;
+            
+            append(li,ingredientName);
+            append(ulIngredients, li);
+            
+
+        })
+    })
+    .catch(function(error){
+        console.log(error);
         //Run code if server returns any errors
-    //});
-    alert(full_recipe_url);
+    });
+    
 }
 

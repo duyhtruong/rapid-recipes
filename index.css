@@ -170,3 +170,9 @@
     border: 1px solid #863438; 
     cursor: pointer;
 }
+
+.ingredientsListFormat{
+    display:flex;
+    flex-direction:column;
+    list-style-type: none;
+}
