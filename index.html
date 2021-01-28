@@ -38,10 +38,13 @@
         <div class="bodyHeader">
         <h1 class="header--font-size  body--font">Just Recipes</h1>
         <h2 class="header--font-size-smaller ">No Ads or Backstories</h2>
-        <form class="form--formatting">
+        <!--<form class="form--formatting">
             <input class="input--style" placeholder="Search Recipes" type="text" id="searchTerm" name="searchTerm"><br>
             <button class="submitButtonStyle" type=button onclick="searchAPI()"><img class="searchSubmitStyle" src='search.png'></button>
-        </form>
+        </form> -->
+        <div>
+            <button class="resultsFullRecipeButton" type=button onclick="searchAPI()" style="margin-top: 50px; margin-bottom: 50px; width:200px;">RANDOM RECIPE</button>
+        </div>
         <div class="bodyResults">
             <ul class="resultsListFormat" id='resultsList'></ul>
         </div>

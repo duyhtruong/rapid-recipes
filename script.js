@@ -25,10 +25,10 @@ function searchAPI(){
                 img = createNode('img'),
                 span = createNode('span'),
                 resultsTitle = createNode('p'),
-                resultsID = createNode('p'),
+                
                 cookTime = createNode('p'),
                 detailButton = createNode('button'),
-                full_recipe_text = createNode('p');
+                
                 divTop = createNode('div'),
                 divBottom = createNode('div');
 
@@ -37,13 +37,13 @@ function searchAPI(){
 
             img.src = searchResults.image; // Add source of image to be src of img
             resultsTitle.innerHTML=`${searchResults.title}`;
-            resultsID.innerHTML=`${searchResults.id}`;
+            
             cookTime.innerHTML=`Ready In ${searchResults.readyInMinutes} Minutes`;
             detailButton.innerHTML="FULL RECIPE";
             img.classList.add("resultsImageSetWidth");
             detailButton.classList.add("resultsFullRecipeButton");
             resultsTitle.classList.add("resultsTitleFont");
-            full_recipe_text.innerHTML = full_recipe_url;
+           
 
             append(divTop,img);
             
@@ -51,9 +51,9 @@ function searchAPI(){
 
             span.classList.add('resultTextGroup')
             append(span,resultsTitle);
-            append(span,resultsID);
+            
             append(span,cookTime);
-            append(span, full_recipe_text);
+         
             append(span, detailButton);
             
             
