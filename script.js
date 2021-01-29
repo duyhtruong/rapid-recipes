@@ -126,14 +126,19 @@ function getRecipeSteps(full_steps_url){
     .then(function(data){
         let recipeStepsResults = data[0].steps;
             stepsUl = createNode('ul');
-            
-
+            stepsUl.classList.add("ingredientsListFormat");
+            stepsTitle = createNode('h2');
+                stepsTitle.innerHTML = ('Instructions: ');
+                stepsTitle.classList.add("stepsTitle");
+            append(ulIngredients, stepsTitle);
         return recipeStepsResults.map(function(recipeStepsResults){
             let stepsLi = createNode('li'),
                 step = createNode('p');
                 step.innerHTML = `${recipeStepsResults.number}. ` + `${recipeStepsResults.step}`;
+                
                 append(stepsLi,step);
                 append(stepsUl, stepsLi);
+                
                 append(ulIngredients, stepsUl);
         })
     })
