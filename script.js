@@ -33,7 +33,7 @@ function searchAPI(){
                 divBottom = createNode('div');
 
             let full_recipe_url = base_url + searchResults.id + '/ingredientWidget.json' + api_key;
-
+            let full_steps_url = base_url + searchResults.id + '/analyzedInstructions' + api_key;
 
             img.src = searchResults.image; // Add source of image to be src of img
             resultsTitle.innerHTML=`${searchResults.title}`;
@@ -66,7 +66,8 @@ function searchAPI(){
             append(ul,li);
 
             detailButton.onclick = function(){
-                getFullRecipe(full_recipe_url,resultsTitle, img);
+                getIngredients(full_recipe_url,resultsTitle, img, full_steps_url);
+                
             };
 
         })
@@ -77,7 +78,7 @@ function searchAPI(){
     });
 }
 
-function getFullRecipe(full_recipe_url,resultsTitle, img){
+function getIngredients(full_recipe_url,resultsTitle, img, full_steps_url){
     fetch(full_recipe_url) // Call the fetch function passing url of API
     .then((resp)=>resp.json()) // Transform the data into json
     .then(function(data){
@@ -98,6 +99,7 @@ function getFullRecipe(full_recipe_url,resultsTitle, img){
             append(divContainer, divLeft);
             append(divContainer, divRight);
             append(ingredientsContainer,divContainer);
+            getRecipeSteps(full_steps_url,divRight);
         return ingredientResults.map(function(ingredientResults){
             //create variables
             let li = createNode('li'),
@@ -108,6 +110,7 @@ function getFullRecipe(full_recipe_url,resultsTitle, img){
             append(divRight, ulIngredients);
 
         })
+        
     })
     .catch(function(error){
         console.log(error);
@@ -116,3 +119,25 @@ function getFullRecipe(full_recipe_url,resultsTitle, img){
     ul.classList.add('displayNone');
 }
 
+function getRecipeSteps(full_steps_url, divRight){
+    fetch(full_steps_url) // Call fetch function passing url of api passed from onclick
+    .then((resp)=>resp.json()) //transform data into json
+    .then(function(data){
+        let recipeStepsResults = data
+            stepsUl = createNode('ul');
+            
+
+        return recipeStepsResults.map(function(recipeStepsResults){
+            let stepsLi = createNode('li'),
+                step = createNode('p');
+                step.innerHTML = `${recipeStepsResults.number}. ` + `${recipeStepsResults.step}`;
+                append(stepsLi,step);
+                append(stepsUl, stepsLi);
+                append(divRight, stepsUl);
+        })
+    })
+    .catch(function(error){
+        console.log(error);
+        //Run code if server returns any errors
+    });
+}
