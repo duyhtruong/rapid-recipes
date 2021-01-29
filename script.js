@@ -85,9 +85,13 @@ function getFullRecipe(full_recipe_url,resultsTitle, img){
             divLeft = createNode('div'),
             divRight = createNode('div'),
             divContainer = createNode('div');
-            ingredientTitle = createNode('p');
+            ingredientTitle = createNode('h2');
             ingredientTitle.innerHTML = 'Ingredients:';
+            ingredientTitle.classList.add("ingredientTitle");
             divContainer.classList.add('justifyRow');
+            divLeft.classList.add("divLeftDetail");
+            divRight.classList.add("divRightDetail");
+            resultsTitle.classList.add("recipeDetailTitle");
             append(divLeft, resultsTitle);
             append(divLeft, img);
             append(divRight, ingredientTitle);

@@ -185,4 +185,24 @@
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.ingredientTitle{
+    padding-bottom:15px;
+}
+
+.recipeDetailTitle{
+    padding-bottom:15px;
+    font-size:2em;
+}
+
+.divLeftDetail{
+    padding-right: 50px;
+    width: 60%;
+}
+
+.divRightDetail{
+    width: 40%;
 }
