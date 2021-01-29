@@ -99,7 +99,7 @@ function getIngredients(full_recipe_url,resultsTitle, img, full_steps_url){
             append(divContainer, divLeft);
             append(divContainer, divRight);
             append(ingredientsContainer,divContainer);
-            getRecipeSteps(full_steps_url,divRight);
+            getRecipeSteps(full_steps_url);
         return ingredientResults.map(function(ingredientResults){
             //create variables
             let li = createNode('li'),
@@ -117,13 +117,14 @@ function getIngredients(full_recipe_url,resultsTitle, img, full_steps_url){
         //Run code if server returns any errors
     });
     ul.classList.add('displayNone');
+    
 }
 
-function getRecipeSteps(full_steps_url, divRight){
+function getRecipeSteps(full_steps_url){
     fetch(full_steps_url) // Call fetch function passing url of api passed from onclick
     .then((resp)=>resp.json()) //transform data into json
     .then(function(data){
-        let recipeStepsResults = data
+        let recipeStepsResults = data[0].steps;
             stepsUl = createNode('ul');
             
 
@@ -133,7 +134,7 @@ function getRecipeSteps(full_steps_url, divRight){
                 step.innerHTML = `${recipeStepsResults.number}. ` + `${recipeStepsResults.step}`;
                 append(stepsLi,step);
                 append(stepsUl, stepsLi);
-                append(divRight, stepsUl);
+                append(ulIngredients, stepsUl);
         })
     })
     .catch(function(error){
