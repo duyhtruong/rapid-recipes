@@ -76,6 +76,7 @@ function searchAPI(){
         console.log(error);
         //Run code if server returns any errors
     });
+    ul.classList.remove('displayNone');
 }
 
 function getIngredients(full_recipe_url,resultsTitle, img, full_steps_url){
