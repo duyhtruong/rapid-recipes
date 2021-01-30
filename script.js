@@ -79,6 +79,12 @@ function searchAPI(){
     ul.classList.remove('displayNone');
 }
 
+function clearResults(...variables){
+    for (var i = 0; i < variables.length; i++){
+
+    }
+}
+
 function getIngredients(full_recipe_url,resultsTitle, img, full_steps_url){
     fetch(full_recipe_url) // Call the fetch function passing url of API
     .then((resp)=>resp.json()) // Transform the data into json
