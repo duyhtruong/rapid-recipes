@@ -67,7 +67,7 @@ function searchAPI(){
 
             detailButton.onclick = function(){
                 getIngredients(full_recipe_url,resultsTitle, img, full_steps_url);
-                
+                clearResults(ul);
             };
 
         })
@@ -76,12 +76,12 @@ function searchAPI(){
         console.log(error);
         //Run code if server returns any errors
     });
-    ul.classList.remove('displayNone');
+    //ul.classList.remove('displayNone');
 }
 
 function clearResults(...variables){
     for (var i = 0; i < variables.length; i++){
-
+        variables[i].innerHTML = '';
     }
 }
 
@@ -123,7 +123,7 @@ function getIngredients(full_recipe_url,resultsTitle, img, full_steps_url){
         console.log(error);
         //Run code if server returns any errors
     });
-    ul.classList.add('displayNone');
+    //ul.classList.add('displayNone');
     
 }
 
