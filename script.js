@@ -16,6 +16,7 @@ function append(parent, el){
 }
 
 function searchAPI(){
+    clearResults(ingredientsContainer,ulIngredients);
     fetch(complete_url) // Call the fetch function passing url of API
     .then((resp)=>resp.json()) // Transform the data into json
     .then(function(data){
