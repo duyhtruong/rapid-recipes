@@ -21,20 +21,23 @@
     <div class="background--color body--font">
         <!--Nav Bar-->
         <div class="navBar ">
+            <a style="text-decoration:none; color: #333333" href="" >
             <div class="navLogo">
                 <img style="height:35px; width:35px; background-color: #5B7D6C;" src='./icon.png' height=100% width=100% />
                 <p style="padding-left: 10px;">Rapid Recipes</p>
             </div>
+        </a>
             <div class="navRight">
-                <p style="padding-right: 50px;">About</p>
-                <p>Featured Recipes</p>
+                <a style="text-decoration:none; color: #333333" href=""><p style="padding-right: 50px;">About</p></a>
+                
             </div>
         </div>
         <!--Nav Bar End-->
 
         <!--Main Body Start-->
         <div class="bodyHero">
-           
+          
+        <!--Header Start-->
         <div class="bodyHeader">
         <h1 class="header--font-size  body--font">Just Recipes</h1>
         <h2 class="header--font-size-smaller ">No Ads or Backstories</h2>
@@ -45,14 +48,19 @@
         <div>
             <button class="resultsFullRecipeButton" type=button onclick="searchAPI()" style="margin-top: 50px; margin-bottom: 50px; width:200px;">RANDOM RECIPE</button>
         </div>
+        </div>
+        <!--Header End-->
+
+        <!--Results Body Start-->
+        <div>
         <div class="bodyResults">
             <ul class="resultsListFormat" id='resultsList'></ul>
         </div>
         <div id="ingredientsContainer">
             <ul class="ingredientsListFormat" id="ingredientsList"></ul>
         </div>
-        </div>
-        
+        </div>        
+        <!--Results Body End-->
         
 
         </div>
