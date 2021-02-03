@@ -39,6 +39,8 @@
     justify-content:space-between;
     align-items: center;
     height: 10vh;
+    max-width:1500px;
+    margin: auto;
 }
 
 .navLogo{
@@ -61,6 +63,8 @@
     flex-direction:column;
     align-items:center;
     justify-content: center;
+    max-width: 1500px;
+    margin:auto;
     
     
 }
@@ -68,9 +72,10 @@
 .bodyHeader{
     display:flex;
     flex-direction:column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     overflow-y: hidden;
+    
 }
 
 .bodyResults{
@@ -86,12 +91,17 @@
     font-size: 5em;
     font-weight:500;
     margin: 0;
+    color:#143601;
+    letter-spacing: 0.3px;
 }
 
 .header--font-size-smaller{
     font-size: 1em;
     font-weight: 300;
     margin: 0;
+    color: #495057;
+    margin-top: 15px;
+    letter-spacing: 0.6px;
 }
 
 .form--formatting{
