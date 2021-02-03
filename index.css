@@ -16,6 +16,7 @@
 
 .headerLeft{
     width: 50%;
+    z-index:2;
 }
 
 .headerTitle{
@@ -26,6 +27,8 @@
 
 .headerRight{
     width: 50%;
+    z-index:1;
+    
 }
 
 .background--color{
