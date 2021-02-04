@@ -10,7 +10,7 @@
     align-items:center;
     justify-content:center;
     width:80%;
-    margin-top:25vh;
+    margin-top:10vh;
  
 }
 
@@ -260,4 +260,31 @@
 .ingredientsListFontWeight{
     font-weight:300;
     padding-bottom:10px;
+}
+
+.footerContainer{
+    height: 15vh;
+    margin-top: 30vh;
+    background-color:#4D774E;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items:center;
+    max-width:1500px;
+    margin:auto;
+    font-weight:300;
+    color: white;
+}
+
+.footerLeft{
+    width:30%;
+    padding-left: 50px;
+}
+
+.footerContactContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    padding-right:50px;
 }
