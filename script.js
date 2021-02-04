@@ -112,6 +112,7 @@ function getIngredients(full_recipe_url,resultsTitle, img, full_steps_url){
             //create variables
             let li = createNode('li'),
                 ingredientName = createNode('p');
+            li.classList.add('ingredientsListFontWeight');
             ingredientName.innerHTML = `${ingredientResults.amount.us.value}` + ` ${ingredientResults.amount.us.unit}` + ` ${ingredientResults.name}`;
             append(li,ingredientName);
             append(ulIngredients, li);
@@ -140,8 +141,9 @@ function getRecipeSteps(full_steps_url){
                 stepsTitle.classList.add("stepsTitle");
             append(ulIngredients, stepsTitle);
         return recipeStepsResults.map(function(recipeStepsResults){
-            let stepsLi = createNode('li'),
-                step = createNode('p');
+            let stepsLi = createNode('li');
+                stepsLi.classList.add('stepsListSpacing');
+            let step = createNode('p');
                 step.innerHTML = `${recipeStepsResults.number}. ` + `${recipeStepsResults.step}`;
                 
                 append(stepsLi,step);

@@ -251,3 +251,13 @@
     padding-top: 15px;
     padding-bottom:15px;
 }
+
+.stepsListSpacing{
+    padding-bottom:20px;
+    font-weight:300;
+}
+
+.ingredientsListFontWeight{
+    font-weight:300;
+    padding-bottom:10px;
+}
