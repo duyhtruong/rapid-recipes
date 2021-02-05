@@ -268,7 +268,8 @@
 }
 
 .footerContainer{
-    height: 15vh;
+    padding-top:5vh;
+    padding-bottom:5vh;
     margin-top: 30vh;
     background-color:#4D774E;
     display:flex;
@@ -293,4 +294,81 @@
     justify-content: flex-start;
     width: 30%;
     padding-right:50px;
+}
+
+@media (max-width: 767.98px) { 
+    .headerContainer{
+        flex-direction:column-reverse;
+    }
+    .headerLeft{
+        width:100%;
+    }
+    .headerRight{
+        width: 100%;
+    }
+
+    .bodyHeader{
+        justify-content:center;
+        align-items:center;
+    }
+
+    .footerContainer{
+        flex-direction:column;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    .footerLeft{
+        width:100%;
+        padding-left:0;
+    }
+    .footerContactContainer{
+        width:100%;
+        padding-right:0;
+        padding-top:5vh;
+    }
+    .resultsListFormat{
+        width:100%;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+    }
+    .resultStyle{
+        margin-bottom: 25px;
+        margin-right: 0;
+    }
+    .resultsCardTop{
+        width: 100%;
+    }
+    .resultsCardBottom{
+        width: 100%;
+    }
+    .justifyRow{
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .divLeftDetail{
+        width: 100%;
+        padding-right: 0;
+        text-align:center;
+    }
+    .divRightDetail{
+        width: 100%;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 5vh;
+    }
+
+}
+
+
+@media (max-width: 991.98px) { 
+
+ }
+
+
+@media (max-width: 1199.98px) { 
+
 }
