@@ -46,21 +46,24 @@
     height: 10vh;
     max-width:1500px;
     margin: auto;
+    width:100vw;
 }
+
 
 .navLogo{
     display:flex;
     flex-direction:row;
     align-items: center;
-    padding-left: 100px;
+    
 }
 
 
 .navRight{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-    padding-right: 100px;
+   padding-right: 5vw;
+}
+
+.navLeft{
+ padding-left: 5vw;
 }
 
 .bodyHero{
@@ -71,7 +74,7 @@
     max-width: 1500px;
     margin:auto;
     flex: 1;
-    
+    width: 100vw;
 }
 
 .bodyHeader{
@@ -276,6 +279,7 @@
     margin:auto;
     font-weight:300;
     color: white;
+    width: 100vw;
 }
 
 .footerLeft{

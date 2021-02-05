@@ -1,88 +1,94 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Rapid Recipes</title>
-  <meta name="description" content="">
-  <meta name="Duy" content="SitePoint">
+    <title>Rapid Recipes</title>
+    <meta name="description" content="">
+    <meta name="Duy" content="SitePoint">
 
-  <link rel="stylesheet" href="./index.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
     <div class="background--color body--font">
         <!--Nav Bar-->
         <div class="navBar">
-            <a style="text-decoration:none; color: #333333" href="" >
-            <div class="navLogo">
-                <img style="height:35px; width:35px; background-color: #5B7D6C;" src='./icon.png' height=100% width=100% />
-                <p style="padding-left: 10px;">Rapid Recipes</p>
+            <div class="navLeft">
+                <a style="text-decoration:none; color: #333333" href="">
+                    <div class="navLogo">
+                        <img style="height:35px; width:35px; background-color: #5B7D6C;" src='./icon.png'/>
+                        <p style="padding-left: 10px;">Rapid Recipes</p>
+                    </div>
+                </a>
             </div>
-        </a>
+            
             <div class="navRight">
-                <a style="text-decoration:none; color: #333333" href=""><p style="padding-right: 50px;">About</p></a>
-                
+                <!--<a style="text-decoration:none; color: #333333" href="">
+                    <p style="padding-right: 50px;">About</p>
+                </a> -->
             </div>
         </div>
         <!--Nav Bar End-->
 
         <!--Main Body Start-->
         <div class="bodyHero">
-          
-        <!--Header Start-->
-        <div class="headerContainer">
-        <div class="headerLeft">
-            <div class="bodyHeader">
-            <div class="headerTitle">
-            <h1 class="header--font-size  body--font">Just Recipes</h1>
-            <h2 class="header--font-size-smaller ">
-                No long, unnecessary introductions or backstories that you 
-                do not want to read, written for SEO. Just ingredients 
-                and steps. That's it. 
-            </h2>
-            </div>
-            <!--<form class="form--formatting">
+
+            <!--Header Start-->
+            <div class="headerContainer">
+                <div class="headerLeft">
+                    <div class="bodyHeader">
+                        <div class="headerTitle">
+                            <h1 class="header--font-size  body--font">Just Recipes</h1>
+                            <h2 class="header--font-size-smaller ">
+                                No long, unnecessary introductions or backstories that you
+                                do not want to read, written for SEO. Just ingredients
+                                and steps. That's it.
+                            </h2>
+                        </div>
+                        <!--<form class="form--formatting">
                 <input class="input--style" placeholder="Search Recipes" type="text" id="searchTerm" name="searchTerm"><br>
                 <button class="submitButtonStyle" type=button onclick="searchAPI()"><img class="searchSubmitStyle" src='search.png'></button>
             </form> -->
+                        <div>
+                            <button class="resultsFullRecipeButton" type=button onclick="searchAPI()"
+                                style="margin-top: 50px; margin-bottom: 50px; width:200px;">RANDOM RECIPE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="headerRight"><img style="width:100%;"
+                        src='hero.png'></div>
+            </div>
+            <!--Header End-->
+
+            <!--Results Body Start-->
             <div>
-                <button class="resultsFullRecipeButton" type=button onclick="searchAPI()" style="margin-top: 50px; margin-bottom: 50px; width:200px;">RANDOM RECIPE</button>
+                <div class="bodyResults">
+                    <ul class="resultsListFormat" id='resultsList'></ul>
+                </div>
+                <div id="ingredientsContainer">
+                    <ul class="ingredientsListFormat" id="ingredientsList"></ul>
+                </div>
             </div>
-            </div>
-        </div>
-        <div class="headerRight"><img style="max-width:150%; position: relative; right:90px; top:-80px;" src='hero.png'></div>
-        </div>
-        <!--Header End-->
-
-        <!--Results Body Start-->
-        <div>
-        <div class="bodyResults">
-            <ul class="resultsListFormat" id='resultsList'></ul>
-        </div>
-        <div id="ingredientsContainer">
-            <ul class="ingredientsListFormat" id="ingredientsList"></ul>
-        </div>
-        </div>        
-        <!--Results Body End-->
-        <!--Footer Start-->
-
-        <!--Footer End-->
+            <!--Results Body End-->
+            
 
         </div>
         <!--Main Body End-->
+
+        <!--Footer Start-->
         <div class="footerContainer">
-            <div class="footerLeft"><p>
-                Rapid Recipes is a website created out of frustration due to 
-                the usability of current recipe websites/blogs. 
-            </p></div>
+            <div class="footerLeft">
+                <p>
+                    Rapid Recipes is a website created out of frustration due to
+                    the usability of current recipe websites/blogs.
+                </p>
+            </div>
             <div class="footerContactContainer">
                 <p>Designed and Coded by Duy Truong</p>
                 <div class="footerSocialsContainer">
@@ -90,11 +96,13 @@
                     <div><a style="color: #2ecc71" target="_blank" href=''>dhtruong.com ></a></div>
                 </div>
             </div>
-            
+
         </div>
-     
+        <!--Footer End-->
+
     </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
