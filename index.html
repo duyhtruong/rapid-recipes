@@ -55,9 +55,18 @@
                 <input class="input--style" placeholder="Search Recipes" type="text" id="searchTerm" name="searchTerm"><br>
                 <button class="submitButtonStyle" type=button onclick="searchAPI()"><img class="searchSubmitStyle" src='search.png'></button>
             </form> -->
-                        <div>
-                            <button class="resultsFullRecipeButton" type=button onclick="searchAPI()"
-                                style="margin-top: 50px; margin-bottom: 50px; width:200px;">RANDOM RECIPE</button>
+                        <div style="margin-top: 2vh; width:100%;">
+                            <form>
+                                <input style="width:100%; border:none; padding-top:8px;padding-bottom:8px;" type='text' id='userInput' name='userInput'>
+                            </form>
+                        </div>
+
+                        <div style="display:flex; justify-content: space-between; width:100%;">
+                            <div><button class="resultsFullRecipeButton" type=button onclick="searchAPI()"
+                                style="margin-top: 50px; margin-bottom: 50px; width:200px;">SEARCH RECIPE</button></div>
+
+                            <div><button class="resultsFullRecipeButton" type=button onclick="searchAPI()"
+                                style="margin-top: 50px; margin-bottom: 50px; width:200px;">RANDOM RECIPE</button></div>
                         </div>
                     </div>
                 </div>
