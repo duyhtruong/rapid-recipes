@@ -15,9 +15,10 @@ function append(parent, el){
     return parent.appendChild(el); // append second parameter to first
 }
 
-function searchQuery(query){
-    let complete_query_url = base_url + 'complexSearch' + api_key + '&query=' + query + url_query;
-    clearResults(ingredientsContainer,ulIngredients);
+function searchQuery(){
+    let userQuery = document.getElementById('userInput').value;
+    let complete_query_url = base_url + 'complexSearch' + api_key + '&query=' + userQuery + url_query;
+    clearResults(ingredientsContainer,ulIngredients, ul);
     fetch(complete_query_url) // Call the fetch function passing url of API
     .then((resp)=>resp.json()) // Transform the data into json
     .then(function(data){
@@ -81,7 +82,7 @@ function searchQuery(query){
 
 
 function searchAPI(){
-    clearResults(ingredientsContainer,ulIngredients);
+    clearResults(ingredientsContainer,ulIngredients, ul);
     fetch(complete_url) // Call the fetch function passing url of API
     .then((resp)=>resp.json()) // Transform the data into json
     .then(function(data){
