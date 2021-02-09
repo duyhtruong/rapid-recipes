@@ -317,6 +317,25 @@ input:focus{
     padding-right:50px;
 }
 
+.searchInputContainer{
+    display:flex;
+    flex-direction:row;
+    margin-top: 3vh; 
+    width: 100%;
+}
+
+.searchInputButton{
+
+}
+
+.searchInputButtonContainer{
+    width:30%;
+}
+
+.searchInputFormContainer{
+    width:70%;
+}
+
 @media (max-width: 767.98px) { 
     .headerContainer{
         flex-direction:column-reverse;

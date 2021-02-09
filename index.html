@@ -22,12 +22,12 @@
             <div class="navLeft">
                 <a style="text-decoration:none; color: #333333" href="">
                     <div class="navLogo">
-                        <img style="height:35px; width:35px; background-color: #5B7D6C;" src='./icon.png'/>
+                        <img style="height:35px; width:35px; background-color: #5B7D6C;" src='./icon.png' />
                         <p style="padding-left: 10px;">Rapid Recipes</p>
                     </div>
                 </a>
             </div>
-            
+
             <div class="navRight">
                 <!--<a style="text-decoration:none; color: #333333" href="">
                     <p style="padding-right: 50px;">About</p>
@@ -51,27 +51,25 @@
                                 and steps. That's it.
                             </h2>
                         </div>
-                        <!--<form class="form--formatting">
-                <input class="input--style" placeholder="Search Recipes" type="text" id="searchTerm" name="searchTerm"><br>
-                <button class="submitButtonStyle" type=button onclick="searchAPI()"><img class="searchSubmitStyle" src='search.png'></button>
-            </form> -->
-                        <div style="margin-top: 2vh; width:100%;">
-                            <form>
-                                <input class="searchInputFont" type='text' id='userInput' name='userInput' placeholder="chicken, pasta ...">
-                            </form>
+
+                        <div class="searchInputContainer">
+                            <div class="searchInputFormContainer">
+                                <form>
+                                    <input class="searchInputFont" type='text' id='userInput' name='userInput'
+                                        placeholder="Search ingredients...">
+                                </form>
+                            </div>
+
+                            <div class="searchInputButtonContainer"><button class="searchInputButton" type=button
+                                    onclick="searchQuery()">SEARCH RECIPE</button></div>
                         </div>
 
-                        <div style="display:flex; justify-content: space-between; width:100%;">
-                            <div><button class="resultsFullRecipeButton" type=button onclick="searchQuery()"
-                                style="margin-top: 50px; margin-bottom: 50px; width:200px;">SEARCH RECIPE</button></div>
-
-                            <div><button class="resultsFullRecipeButton" type=button onclick="searchAPI()"
+                        <div><button class="resultsFullRecipeButton" type=button onclick="searchAPI()"
                                 style="margin-top: 50px; margin-bottom: 50px; width:200px;">RANDOM RECIPE</button></div>
-                        </div>
+
                     </div>
                 </div>
-                <div class="headerRight"><img style="width:100%;"
-                        src='hero.png'></div>
+                <div class="headerRight"><img style="width:100%;" src='hero.png'></div>
             </div>
             <!--Header End-->
 
@@ -85,7 +83,7 @@
                 </div>
             </div>
             <!--Results Body End-->
-            
+
 
         </div>
         <!--Main Body End-->
@@ -94,13 +92,13 @@
         <div class="footerContainer">
             <div class="footerLeft">
                 <p>
-                    Rapid Recipes was created out of frustration over the current state of 
+                    Rapid Recipes was created out of frustration over the current state of
                     recipe blogs and websites. </br></br>
-                    Modern day food blogs are littered with ads and 
-                    have huge walls of text, crafted to include as many SEO keywords as possible, 
+                    Modern day food blogs are littered with ads and
+                    have huge walls of text, crafted to include as many SEO keywords as possible,
                     resulting in endless scrolling just to find the recipe.
-                </br></br>
-                    Rapid Recipes gives you what you want. Just the recipe, no ads or SEO jargon. 
+                    </br></br>
+                    Rapid Recipes gives you what you want. Just the recipe, no ads or SEO jargon.
                 </p>
             </div>
             <div class="footerContactContainer">
