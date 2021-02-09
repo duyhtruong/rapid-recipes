@@ -325,7 +325,24 @@ input:focus{
 }
 
 .searchInputButton{
+    height: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: none;
+    font-family: roboto;
+    font-weight: 300;
+    color: white;
+    background-color: #538d22;
+    letter-spacing: 0.05em;
+}
 
+.searchInputButton:hover{
+    color:#538d22;
+    background-color:white;
+    border: 1px solid #538d22; 
+    cursor: pointer;
 }
 
 .searchInputButtonContainer{

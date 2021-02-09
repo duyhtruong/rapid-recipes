@@ -7,6 +7,13 @@ const complete_url = base_url + random_search + api_key + url_query;
 const ulIngredients = document.getElementById('ingredientsList');
 const ingredientsContainer = document.getElementById('ingredientsContainer');
 
+document.getElementById("userInput").addEventListener("keyup", function(event){
+    event.preventDefault();
+    if (event.keyCode === 13){
+        document.getElementById("searchInputButton").click();
+    }
+});
+
 function createNode(element){
     return document.createElement(element); // Create type of element you pass in param
 }
@@ -223,3 +230,4 @@ function getRecipeSteps(full_steps_url){
         //Run code if server returns any errors
     });
 }
+

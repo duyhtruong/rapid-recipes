@@ -54,17 +54,21 @@
 
                         <div class="searchInputContainer">
                             <div class="searchInputFormContainer">
-                                <form>
+                                <form onSubmit="return false;">
                                     <input class="searchInputFont" type='text' id='userInput' name='userInput'
                                         placeholder="Search ingredients...">
+                                        
                                 </form>
                             </div>
+                            <div class="searchInputButtonContainer">
+                                <button id="searchInputButton" class="searchInputButton" type="button"
+                                onclick="searchQuery()">SEARCH</button>
+                            </div>
 
-                            <div class="searchInputButtonContainer"><button class="searchInputButton" type=button
-                                    onclick="searchQuery()">SEARCH RECIPE</button></div>
+                           
                         </div>
 
-                        <div><button class="resultsFullRecipeButton" type=button onclick="searchAPI()"
+                        <div><button class="resultsFullRecipeButton" type="button" onclick="searchAPI()"
                                 style="margin-top: 50px; margin-bottom: 50px; width:200px;">RANDOM RECIPE</button></div>
 
                     </div>
